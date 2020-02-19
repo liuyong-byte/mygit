@@ -2,16 +2,24 @@
 新建文件hello.html
 然后通过git config --global user.name "liuyong-byte"和GitHub名字统一
 	git config --global user,email "1256230450@qq.com"
+	//默认配置之后无须配置
 	加入缓存 git add hello.html
 	提交	git commit -m "just atest"
+
+秘钥激活成功：
+	git push origin master 完成提交
+	//
 	生成密钥 ssh-keygen -t rsa -C “1256230450@qq.com” 会在c盘目录用户下面生成.ssh目录
 	复制.pub里面的所有内容
-	
-	在GitHub里面点击your profit创建仓库
+	//
+	秘钥如果存在可以重复使用
+	在GitHub里面点击your profit创建仓库mygit
 	点击ssh创建 名字自定义 写入秘钥
+	//
 
-	生成远程git仓库 
-	git remote add origin git@github.com:liuyong-byte/mygit.git
-	把文件提交到远程仓库 选择yes或者y
-通过克隆 git clone （ssh 远程仓库）为参数
+	//生成远程git仓库 
+	//git remote add origin git@github.com:liuyong-byte/mygit.git
+	//如果存在git就会报错 需要再次创造
+通过克隆 git clone （ssh 远程仓库）为参数/或者生成的ip地址
+
 	
