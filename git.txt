@@ -1,0 +1,17 @@
+在文件目录打开git bash here
+新建文件hello.html
+然后通过git config --global user.name "liuyong-byte"和GitHub名字统一
+	git config --global user,email "1256230450@qq.com"
+	加入缓存 git add hello.html
+	提交	git commit -m "just atest"
+	生成密钥 ssh-keygen -t rsa -C “1256230450@qq.com” 会在c盘目录用户下面生成.ssh目录
+	复制.pub里面的所有内容
+	
+	在GitHub里面点击your profit创建仓库
+	点击ssh创建 名字自定义 写入秘钥
+
+	生成远程git仓库 
+	git remote add origin git@github.com:liuyong-byte/mygit.git
+	把文件提交到远程仓库 选择yes或者y
+通过克隆 git clone （ssh 远程仓库）为参数
+	
