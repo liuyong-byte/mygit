@@ -1,0 +1,9 @@
+1:事务前提
+必须设置引擎innodb
+设置表引擎innodb alter table对表属性的修改
+设置会话自动提交关闭 show session variables like “autocommit”
+	set session autocommit=0
+	sql语句
+	start transaction 开启事务或者 begin
+	rollback
+	commit
