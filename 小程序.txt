@@ -1,0 +1,50 @@
+小程序由APP构造器组成的宿主环境 包含page的view视图层与一个核心的jscore层
+APP({
+
+})
+拥有自己的生命周期与全局变量
+onlaunch全局只加载一次
+onshow 当小程序启动或者从后台切换前台显示就会触发
+onhide 当从前台进入后台就会触发
+onerror当小程序脚本错误 或者api调用失败
+其他字段 可以添加任意函数与数据到object参数中
+在实例回调this可以调用
+不管是在
+函数内部this.参数名字=值 等于外部 参数名字：值
+因为是object类型 this在函数里面的归宿是自己
+jscore采用this.setData({})改变数据 两个通信的线程消耗不能超过1024kb
+page切换用栈保留最高十层【A,B,C】先进后出 
+navigateto或redirectto（触发onunload）进栈
+navigateback（输入栈数）出栈结合getcurrentpages可以获取当前栈
+栈数长度比索引大一所以长度减掉2就是当前页因为是按照索引来算的
+也可以默认为空自动寻找上一页
+switchTab是切换的时候将page的当前栈全部清除
+只能打开appjson配置的tabBar页面
+不会销毁page
+relaunch重启切换任意页面消耗页面触发onlaunch
+event
+detail 额外信息
+表单采用 e.detail.value(对应name：value）的表单组件
+页面切换 options.页面参数
+组件传参 子传父 e.detail
+target mark touch 触发源头组件
+currenttarget offsettop 当前绑定事件组件
+dataset
+
+bindtap 冒泡 
+bind/catch  capture-bind capture-catch取消冒泡中断捕获
+捕获一般的点击移动触摸键盘事件有冒泡
+采用其他事件一般bind用的多 比如image bindload binderror
+catchtap 不冒泡
+
+api通常的是挂载在wx的下面除了page与APP构造器
+
+一般on是监听回调一个函数
+api是异步接口
+api通常参数有success(一般含有回调结果参数) fail complete三个函数调用结果
+get获取set设置
+页面上发生的一切都是事件都对应jscore核心回调
+包含用户行为与组件部分状态反馈
+wx.canIUse()
+${component}.${attribute}.${option}判断组件
+bind:函数名（自定义与内置）button.open-type.useinfo
