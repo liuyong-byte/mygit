@@ -1,0 +1,20 @@
+结合showmodel与button触发bindgetuserinfo 设置open-type为getUserInfo
+调用点击事件返回event
+判断button属性type为getuserinfo
+把wx.getUserInfo()数据返回detail={wx.getUserInfo()}
+wx.getUserInfo加载成功返回success函数(res)=>res.code
+wx.request({url:"",method:"",data:"",header:"",success:"",complate:""})
+配合wx:if wx:elif wx:else 
+切换隐藏界面
+wx.showModel(
+{
+title
+content
+showCancel
+confirmText
+success(res){
+res.confirm
+res.cancel
+}
+}
+)
