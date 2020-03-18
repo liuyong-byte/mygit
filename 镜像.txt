@@ -1,0 +1,84 @@
+pip install django -i https://pypi.tuna.tsinghua.edu.cn/simple
+json数据格式必须要包含在{}里面
+里面的数据随便数组与对象的嵌套
+import pymysql //mysql数据库驱动包
+import requests http库get(url,header={})/post 变量.text 
+import json//
+from bs4 import BeautifulSoup 抓取网页元素通过标签属性内容正则字符串等等手段
+import pandas //数据分析包
+
+execute fetchall/one 
+
+把数据写入execl表
+pandas.read_execl
+查询数据为元组
+采用列表插入list.append()
+a=pandas.DataFrame 建立表格
+a.to_execl(新execl路径)
+
+
+拉取网页图片
+import urllib //
+import re 正则
+'%d'$字符串 int(x)
+urllib.request.urlretrieve(url/网站路径,'./img/'+'%d'%x+'.jpg'/本地目录)retrieve检索
+将线上路径下载到本地目录 字符合并需要类型一样
+
+
+获取json数据存储数据库
+header={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0"}
+var=requests.get("http://localhost:8082/think/Dome/Api/api/t/狮子",header)
+#获取json格式
+#var var.text.json var.url
+
+#获取HTML页面数据
+html=requests.get("http://localhost:8082/aa/shouye.php")
+soup=BeautifulSoup(html.text,'lxml')
+str='^(img/)[0-9a-z]{3}\.jpg$'
+pattern=soup.find_all(src=re.compile(str))
+com=[]
+x=0
+for item in pattern:
+    print(item['src'])
+    url='http://localhost:8082/aa/'+item['src']
+    x=x+1
+    urllib.request.urlretrieve(url,'./img/'+'%d'%x+'.jpg')
+    
+    com.append(item) 
+print(ac)   
+obj=var.json();#变成了元组
+list=[{"name":"liu","age":"18"},{"name":"li","age":"20"}]
+# my=pymysql.connect("localhost","root","123456","py")//连接数据库
+# cur=my.cursor()//获取游标用于操作数据库
+# for b in list:
+#     print(b)
+# for a in obj:
+#     if a=='sql':
+        //操作修改语句需要设置innodb事务引擎
+#         for w in obj[a]:
+#             sql="insert into cl(fzname,fztupian,fzprice,fid) values('%s','%s','%s',%s)" %(w["fzname"],w["fztupian"],w["fzprice"],w["fid"])
+#             try://"语句 values（'$s'）"$(变量)
+#                 cur.execute(sql)//执行sql代码
+#                 my.commit()//表
+#             except:
+#                 print("错误") 
+#                 cur.rollback()             
+#                 # 修改不关闭表
+#     else:
+#         pass
+# my.close()
+      
+# print(obj["user"])
+#my=pymysql.connect("localhost","root","123456","py")
+# cur=my.cursor();
+# cur.execute("select * from fz")
+# da=cur.fetchone()
+# print(da)
+# sql = "INSERT INTO fz(ok, y, fzname, fztupian, fzprice,fid)VALUES ('%s', '%s',  '%s',  '%s',  '%s',%s)" %\
+#      (obj["user"]["ok"], obj["user"]["y"],obj["sql"]["fzname"], obj["sql"]["fztupian"],obj["sql"]["fzprice"],obj["sql"]["fid"])
+# try:
+#     cur.execute(sql)     
+#     my.commit()
+# except:
+#     cur.rollback()    
+# my.close()
