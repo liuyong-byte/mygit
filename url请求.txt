@@ -1,0 +1,16 @@
+import requests
+import beautifulSoup
+import urlilb
+from urlilb.parse import quote
+from urlilb.parse import unqupte
+url提交
+有get post
+url=""分析url
+header="{'User-Agent'}"
+cookie="{}"
+request.post(url,cookies=cookie,headers=header)
+quote解码中文unquote编码中文
+
+urlilb.request.urlretrieve(远程,本地)
+
+pandas beautifulSoup urlilb re
