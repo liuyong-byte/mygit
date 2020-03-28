@@ -1,0 +1,36 @@
+create function w( b varchar(255))
+returns varchar(255)
+begin
+return(select pass from admer where admer=b);
+END
+select w("111");
+create PROCEDURE e(in a varchar(255),out b varchar(255))
+begin
+select pass into b from admer where admer=a;
+end
+call e("111",@b);
+SELECT @b;
+eval函数解析json对象 
+eval函数解析json对象 
+eval函数解析json对象 
+eval函数解析json对象 
+
+eval函数解析json对象 
+eval函数解析json对象 
+eval函数解析json对象 
+eval函数解析json对象 
+CREATE TRIGGER <触发器名称>  --触发器必须有名字，最多64个字符，可能后面会附有分隔符.它和MySQL中其他对象的命名方式基本相象.
+{ BEFORE | AFTER }  --触发器有执行的时间设置：可以设置为事件发生前或后。
+{ INSERT | UPDATE | DELETE }  --同样也能设定触发的事件：它们可以在执行insert、update或delete的过程中触发。
+ON <表名称>  --触发器是属于某一个表的:当在这个表上执行插入、 更新或删除操作的时候就导致触发器的激活. 我们不能给同一张表的同一个事件安排两个触发器。
+FOR EACH ROW  --触发器的执行间隔：FOR EACH ROW子句通知触发器 每隔一行执行一次动作，而不是对整个表执行一次。
+<触发器SQL语句>  --触发器包含所要触发的SQL语句：这里的语句可以是任何合法的语句， 包括复合语句，但是这里的语句受的限制和函数的一样。
+
+--你必须拥有相当大的权限才能创建触发器（CREATE TRIGGER），如果你已经是Root用户
+DROP TRIGGER IF EXISTS t_afterinsert_on_tab1;
+CREATE TRIGGER t_afterinsert_on_tab1 
+AFTER INSERT ON tab1
+FOR EACH ROW
+BEGIN
+     insert into tab2(tab2_id) values(new.tab1_id);
+END;
