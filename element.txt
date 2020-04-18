@@ -1,0 +1,133 @@
+﻿<template>
+  <div>
+    <el-select slot="prepend" multiple  v-model="sum" placeholder="" @change="sel">
+        <el-option
+          v-for="item in options"
+          :key="item.index"
+          
+          :value="item.name">
+          <span style="float: left">{{ item.name }}{{item.index}}</span>
+      <span style="float: right; color: #8492a6; font-size: 13px">{{ item.pass }}</span>
+        </el-option>
+      </el-select>
+
+    <el-input size="medium" v-model="input" placeholder="qisa">
+      <el-button slot="append" icon="el-icon-search"></el-button>
+      <template slot="prepend">as</template>
+      <template slot="append">12</template>
+    </el-input>
+    
+    <el-input type="textarea" v-model="input" autosize placeholder=""></el-input>
+    <el-input
+    placeholder="请选择日期"
+    v-model="input">
+    <i slot="suffix" class="el-input__icon el-icon-date"></i>
+  </el-input>
+  <el-input
+    placeholder="请输入内容"
+    v-model="input">
+    <i slot="prefix" class="el-input__icon el-icon-search"></i>
+  </el-input>
+    <el-input v-model="input" placeholder="请输入" prefix-icon="el-icon-delete"></el-input>{{input}}
+    <el-input-number v-model="input" @change="inputChange" :min="1" :max="10" label="label"></el-input-number>
+  <el-checkbox-group v-model="checkList" @change="list" fill="red" text-color="red" size="small">
+    <el-checkbox label="复选框 A" size="mini"></el-checkbox>
+    <el-checkbox label="复选框 B"></el-checkbox>
+    <el-checkbox label="复选框 C"></el-checkbox>
+    <el-checkbox label="禁用" disabled></el-checkbox>
+    <el-checkbox label="选中且禁用" disabled></el-checkbox>
+  </el-checkbox-group>
+    
+     <el-radio-group v-model="radio">
+    <el-radio :label="3" border >备选项</el-radio>
+    <el-radio :label="6" disabled="">备选项</el-radio>
+    <el-radio :label="9" border >备选项</el-radio>
+  </el-radio-group>
+  <el-radio-group v-model="radio2" size="medium">
+      <el-radio-button label="上海" ></el-radio-button>
+      <el-radio-button label="北京"></el-radio-button>
+      <el-radio-button label="广州"></el-radio-button>
+      <el-radio-button label="深圳"></el-radio-button>
+    </el-radio-group>
+    <div>
+  <el-link icon="el-icon-edit">编辑</el-link>
+  <el-link>查看<i class="el-icon-view el-icon--right"></i> </el-link>
+</div>
+<el-row :gutter="10">
+  <div>
+  <el-link href="https://element.eleme.io" target="_blank">默认链接</el-link>
+  <el-link type="primary"  :href="url">主要链接</el-link>
+  <el-link type="success">成功链接</el-link>
+  <el-link type="warning">警告链接</el-link>
+  <el-link type="danger">危险链接</el-link>
+  <el-link type="info">信息链接</el-link>
+</div>
+</el-row>
+
+    <el-row>
+  <el-button>默认按钮</el-button>
+  <el-button size="medium">中等按钮</el-button>
+  <el-button size="small">小型按钮</el-button>
+  <el-button size="mini" disabled>超小按钮</el-button>
+</el-row>
+
+    
+    <el-button-group>
+  <el-button type="primary" icon="el-icon-arrow-left">上一页</el-button>
+  <el-button type="primary">下一页<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+</el-button-group>
+<el-button-group>
+  <el-button type="primary" icon="el-icon-edit"></el-button>
+  <el-button type="primary" icon="el-icon-share"></el-button>
+  <el-button type="primary" icon="el-icon-delete"></el-button>
+</el-button-group>
+    <el-button type="text" :loading="true">文字按钮</el-button>
+<el-button type="text" disabled>文字按钮</el-button>
+    <el-row>
+  <el-button icon="el-icon-search" circle></el-button>
+  <el-button type="primary" icon="el-icon-edit" circle></el-button>
+  <el-button type="success" icon="el-icon-check" circle></el-button>
+  <el-button type="info" icon="el-icon-message" circle></el-button>
+  <el-button type="warning" icon="el-icon-star-off" circle></el-button>
+  <el-button type="danger" icon="el-icon-delete" circle></el-button>
+</el-row>
+      <el-row>
+        <el-row>
+  <el-button>默认按钮</el-button>
+  <el-button type="primary" icon="el-icon-check" circle >主要按钮</el-button>
+  <el-button type="success" plain>成功按钮</el-button>
+  <el-button type="info" round>信息按钮</el-button>
+  <el-button type="warning">警告按钮</el-button>
+  <el-button type="danger">危险按钮</el-button>
+</el-row>
+   <i class="el-icon-edit"></i>
+<i class="el-icon-share"></i>
+<i class="el-icon-delete"></i>
+<el-button type="primary" icon="el-icon-search">搜索</el-button>
+        <!-- <el-container>：外层容器。当子元素中包含 <el-header> 或 <el-footer> 时，全部子元素会垂直上下排列，否则会水平左右排列。
+
+<el-header>：顶栏容器。
+
+<el-aside>：侧边栏容器。
+
+<el-main>：主要区域容器。
+
+<el-footer>：底栏容器。 -->
+  <span>12</span>
+    <el-container>
+  <el-header >Header</el-header>
+  <el-container>
+    <el-aside width="200px">Aside</el-aside>
+    <el-main>Main</el-main>
+  </el-container>
+  <el-footer>qw</el-footer>
+</el-container>
+        <el-col :span="6" :xs="24">1</el-col>
+        <el-col :span="6" :xs="24">2</el-col>
+        <el-col :span="6" :xs="24">3</el-col>
+        <el-col :span="6" :xs="24">4</el-col>
+      </el-row>
+      <el-row :gutter="10" >
+        <el-col :span="6" :push="6" style="border:1px solid red;">1</el-col>
+      </el-row>
+    
