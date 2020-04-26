@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+a{
+				color: black;
+			}
+			a:hover{
+				color: skyblue;
+				text-decoration: none;
+			}
+			/*轮盘图图片定位*/
+			div#img img{
+				position: absolute;
+				z-index: 20;
+			}
+			/*轮播点的定位*/
+			ul#hover{
+				position: absolute;
+				z-index: 30;
+				top: 150px;
+				left: 150px;
+				cursor: pointer;
+			}
+			ul#hover li{
+				float: left;
+				margin-right: 20px;
+				list-style-type: circle;
+			}
+			ul#hover li:hover{
+				list-style-type: disc;
+			}
+			/*边框颜色*/
+			div.col-lg-12 div.col-lg-3{
+				border: 1px solid antiquewhite;
+			}
+			/*商品分类的隐藏显示*/
+			
+			
+				 ul.lb{
+					 background:#FF0;
+					 }
+				 ul.lb li{margin-top:40px;border:1px solid red;text-align:left;}
+				 ul.lb li a{margin-left:30px;font-size:14px;color:#F60;}
+				  ul.lb li a:hover{color:blue;}
+				  img{width:100px;height:100px;}
+				 div.k p{display:inline;}
+				 div.k p span{display:block;}
+
