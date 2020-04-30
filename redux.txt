@@ -1,0 +1,51 @@
+// import {createStore} from 'redux'//用于创建仓库
+// import {combineReducers} from 'redux'//
+// const initialState = {//state数据
+//     cart: [
+//       {
+//         product: 'bread 700g',
+//         quantity: 2,
+//         unitCost: 90
+//       },
+//       {
+//         product: 'milk 500ml',
+//         quantity: 1,
+//         unitCost: 47
+//       }
+//     ]
+//   }
+//   const ADD_TO_CART = 'ADD_TO_CART';
+//   const cartReducer = function(state=initialState, action) {//数据与action提交类型
+//     switch (action.type) {//判断提交
+//         case ADD_TO_CART: {
+//           return {
+//             ...state,
+//             cart: [...state.cart, action.payload]
+//           }
+//         };break;
+    
+//         default:
+//           return state;
+//       }
+//   }
+//   function addToCart(product, quantity, unitCost) {//actioc提交方法 具有属性与形参
+//     return {
+//       type: ADD_TO_CART,
+//       payload: { product, quantity, unitCost }
+//     }
+//   }
+//   const allReducers = {//多个state数据集合
+//     products: cartReducer
+    
+//   }
+//  let a=combineReducers(allReducers)//通过com管理
+//   let store=createStore(a)//仓库
+//   store.dispatch(addToCart('Coffee 500gm', 1, 250));
+// store.dispatch(addToCart('Flour 1kg', 2, 110));
+// store.dispatch(addToCart('Juice 2L', 1, 250));//dispatch分发
+//   let unsubscribe = store.subscribe(() =>//
+//   console.log(store.getState())
+// );``
+
+// unsubscribe();
+/

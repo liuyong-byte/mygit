@@ -1,0 +1,75 @@
+全局配置：但是我们在实际的项目中，很少使用全局配置
+axios.defaults.baseURL = 'https://www.monk.com/api';
+axios.defaults.timeout = 1000;
+1
+2
+实例配置：实力上配置，首先就是要创建一个实例了
+const service = axios.create({
+  baseURL: 'https://www.monk.com/api',
+  timeout: 1000,
+})
+service.get('/getUserInfo').then(res => {
+  console.log(res)
+})
+
+请求配置：在请求中配置的优先级最大。
+const instance = axios.create();
+instance.get('https://www.monk.com/api/fileupload', {
+  timeout: 5000
+})
+{
+  url: "", // 用于请求的服务器的地址
+  method: 'get', // 请求时使用的方法,默认是 get
+  baseURL: 'https://monk/api/', //baseURL将自动加在url前面
+  headers: {},//定义请求头的信息
+  params: {}, // 将与请求一起发送的 URL 参数,会拼接在url后面
+  data: {},  //会将请求参数放在请求体中
+  timeout: 1000, //请求超时的毫秒数,超出时间后，请求就会被中断
+  responseType: 'json', // 默认是json，表示服务器响应的数据类型，可以是 'arraybuffer', 'blob', 'document', 'json', 'text', 'stream'
+}
+{
+  data: {}, //由服务器提供的响应
+
+  status: 200, //来自服务器响应的 HTTP 状态码
+
+  statusText: 'OK', //来自服务器响应的 HTTP 状态信息
+
+  headers: {}, //服务器响应的头
+
+  config: {}  // 是为请求提供的配置信息
+}
+axios.get('https:/monk/api/user')
+.catch(function (error) {
+    // 错误可能是请求错误，也可能是响应错误
+    if (error.response) {
+        // 响应错误
+        console.log(error.response)
+    } else if (error.request) {
+        // 请求错误
+        console.log(error.request)
+    } else {
+        console.log('Error', error.message);
+    }
+});
+axios.interceptors.request.use(function (config) {
+    // 在发送请求之前做些什么
+    return config;
+  }, function (error) {
+    // 对请求错误做些什么
+    return Promise.reject(error);
+  })
+
+axios.interceptors.request.use(function (config) {
+    // 在发送请求之前做些什么
+    return config;
+  }, function (error) {
+    // 对请求错误做些什么
+    return Promise.reject(error);
+  })
+axios.interceptors.response.use(function (response) {
+    // 对响应数据做点什么
+    return response;
+  }, function (error) {
+    // 对响应错误做点什么
+    return Promise.reject(error);
+  })
