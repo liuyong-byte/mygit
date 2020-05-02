@@ -36,16 +36,16 @@ function sendMail($to,$title,$content){
     $mail->CharSet = 'UTF-8';
  
     //设置发件人姓名（昵称） 任意内容，显示在收件人邮件的发件人邮箱地址前的发件人姓名
-    $mail->FromName = '刘勇';
+    $mail->FromName = 'xx';
  
     //smtp登录的账号 这里填入字符串格式的qq号即可
-    $mail->Username ='1256230450@qq.com';
+    $mail->Username ='xxx@qq.com';
  
     //smtp登录的密码 使用生成的授权码（就刚才叫你保存的最新的授权码）
     $mail->Password = 'qdcrwjkrgbobghjj';
  
     //设置发件人邮箱地址 这里填入上述提到的“发件人邮箱”
-    $mail->From = '1256230450@qq.com';
+    $mail->From = 'xxx@qq.com';
  
     //邮件正文是否为html编码 注意此处是一个方法 不再是属性 true或false
     $mail->isHTML(true); 
@@ -77,7 +77,7 @@ function sendMail($to,$title,$content){
     }
 }
  
-$flag = sendMail('1946622921@qq.com','hello','<h2>你好我是刘勇</h2><span>我很坚强的 放心<span>');
+$flag = sendMail('xxx@qq.com','hello','<h2>你好</h2><span>我很坚强的 放心<span>');
 if($flag){
     echo "发送邮件成功！";
 }else{
