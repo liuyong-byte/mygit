@@ -1,0 +1,89 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": true
+			}
+		}
+	    ,{
+            "path" : "pages/user/user",
+            "style" : {
+				"navigationBarTitleText": "动态",
+				"enablePullDownRefresh": true
+			}
+        }
+        ,{
+            "path" : "pages/info/info",
+            "style" : {
+				"navigationBarTitleText": "信息",
+				"enablePullDownRefresh": true
+			}
+        }
+        ,{
+            "path" : "pages/dong/dong",
+            "style" : {
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh": true
+			}
+        }
+        ,{
+            "path" : "pages/shou/shou",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/history/history",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/search/search",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/list/list",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/wj/wj",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/talk/talk",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/remark/remark",
+            "style" : {}
+        }
+        
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar":{
+		"backgroundColor":"#4CD964",
+		"color":"#F8F8F8",
+		"list":[
+			{
+				"pagePath":"pages/index/index",
+				"text":"首页"
+			},
+			{
+				"pagePath":"pages/dong/dong",
+				"text":"动态"
+			},
+			{
+				"pagePath":"pages/info/info",
+				"text":"信息"
+			},
+			{
+				"pagePath":"pages/user/user",
+				"text":"登录"
+			}
+		]
+	}
+}

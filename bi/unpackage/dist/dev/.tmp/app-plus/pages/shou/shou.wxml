@@ -1,0 +1,1 @@
+<view class="col">{{'收藏\n\t'+this.$store.state.msg+''}}<view class="col-1"><block wx:for="{{url}}" wx:for-item="a" wx:for-index="__i0__" wx:key="id"><image style="width:60%;" default="图片如下" src="{{a.url}}"></image></block></view><button type="primary" size="mini" data-event-opts="{{[['tap',[['upload',['$event']]]]]}}" bindtap="__e">上传</button></view>

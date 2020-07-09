@@ -1,0 +1,1 @@
+<view><view class="col"><block wx:for="{{list}}" wx:for-item="item" wx:for-index="__i0__" wx:key="id"><view class="col-1"><text>{{item.other}}</text><view>{{''+item.speak+''}}</view></view></block></view></view>

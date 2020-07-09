@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/info/info",
+    "pages/dong/dong",
+    "pages/shou/shou",
+    "pages/history/history",
+    "pages/search/search",
+    "pages/list/list",
+    "pages/wj/wj",
+    "pages/talk/talk",
+    "pages/remark/remark"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "backgroundColor": "#4CD964",
+    "color": "#F8F8F8",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/dong/dong",
+        "text": "动态"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "text": "信息"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "登录"
+      }
+    ]
+  },
+  "permission": {},
+  "usingComponents": {},
+  "sitemapLocation": "sitemap88.json"
+}
