@@ -1,0 +1,169 @@
+import Vue from 'vue';
+import {
+  Pagination,//分页
+  Dialog,//显示框
+  Autocomplete,//输入建议框
+  Dropdown,//下拉
+  DropdownMenu,//下拉菜单
+  DropdownItem,//菜单项
+  Menu,//菜单导航
+  Submenu,//导航下拉
+  MenuItem,//下拉项
+  MenuItemGroup,//下拉项组
+  Input,//输入框
+  InputNumber,//数字输入框
+  Radio,//单选
+  RadioGroup,//单选组
+  RadioButton,//单选按钮
+  Checkbox,//复选框
+  CheckboxButton,//复选框
+  CheckboxGroup,//复选组
+  Switch,//开关
+  Select,//下拉选择 
+  Option,//下拉选项
+  OptionGroup,//选择组合
+  Button,//按钮
+  ButtonGroup,//按钮组合
+  Table,//表格
+  TableColumn,//表格列循环使用
+  DatePicker,//日期选择器
+  TimeSelect,//下拉选择
+  TimePicker,//时间选择器
+  Popover,//类型dialog的框 可以嵌套更简单
+  Tooltip,//也差不多弹出框
+  Breadcrumb,//面包屑
+  BreadcrumbItem,//面包屑选择项
+  Form,//表单
+  FormItem,//表单项
+  Tabs,//标签分页
+  TabPane,//标签分项
+  Tag,//标签
+  Tree,//树形
+  Alert,//警告框
+  Slider,//滑动条
+  Icon,//图标
+  Row,//hang24
+  Col,//占一行几分之几
+  Upload,//上传文件
+  Progress,//进度条
+  Spinner,//
+  Badge,//徽章
+  Card,//卡片
+  Rate,//评论
+  Steps,//步骤
+  Step,//每一步
+  Carousel,//下拉建议框
+  CarouselItem,//下拉建议项
+  Collapse,//折叠项
+  CollapseItem,//折叠单项
+  Cascader,//联级选择器
+  ColorPicker,//颜色选择器
+  Transfer,//穿梭
+  Container,//容器不包括header footer 就是水平
+  Header,//头
+  Aside,//Bian
+  Main,//bian
+  Footer,//脚
+  Timeline,//时间线
+  TimelineItem,//时间线选择项
+  Link,//href
+  Divider,//分割线
+  Image,//图片
+  Calendar,//日历
+  Backtop,//头顶
+  PageHeader,//页头
+  CascaderPanel,//
+  Loading,//加载
+  MessageBox,//显示框 confirm alert prompt
+  Message,//显示
+  Notification,//显示框 都有自定义内容
+  Popconfirm,//
+  InfiniteScroll,//无尽下拉
+  Drawer
+ 
+} from 'element-ui';
+Vue.use(Drawer)
+Vue.use(InfiniteScroll)
+Vue.use(Popconfirm)
+Vue.use(Pagination);
+Vue.use(Dialog);
+Vue.use(Autocomplete);
+Vue.use(Dropdown);
+Vue.use(DropdownMenu);
+Vue.use(DropdownItem);
+Vue.use(Menu);
+Vue.use(Submenu);
+Vue.use(MenuItem);
+Vue.use(MenuItemGroup);
+Vue.use(Input);
+Vue.use(InputNumber);
+Vue.use(Radio);
+Vue.use(RadioGroup);
+Vue.use(RadioButton);
+Vue.use(Checkbox);
+Vue.use(CheckboxButton);
+Vue.use(CheckboxGroup);
+Vue.use(Switch);
+Vue.use(Select);
+Vue.use(Option);
+Vue.use(OptionGroup);
+Vue.use(Button);
+Vue.use(ButtonGroup);
+Vue.use(Table);
+Vue.use(TableColumn);
+Vue.use(DatePicker);
+Vue.use(TimeSelect);
+Vue.use(TimePicker);
+Vue.use(Popover);
+Vue.use(Tooltip);
+Vue.use(Breadcrumb);
+Vue.use(BreadcrumbItem);
+Vue.use(Form);
+Vue.use(FormItem);
+Vue.use(Tabs);
+Vue.use(TabPane);
+Vue.use(Tag);
+Vue.use(Tree);
+Vue.use(Alert);
+Vue.use(Slider);
+Vue.use(Icon);
+Vue.use(Row);
+Vue.use(Col);
+Vue.use(Upload);
+Vue.use(Progress);
+Vue.use(Spinner);
+Vue.use(Badge);
+Vue.use(Card);
+Vue.use(Rate);
+Vue.use(Steps);
+Vue.use(Step);
+Vue.use(Carousel);
+Vue.use(CarouselItem);
+Vue.use(Collapse);
+Vue.use(CollapseItem);
+Vue.use(Cascader);
+Vue.use(ColorPicker);
+Vue.use(Transfer);
+Vue.use(Container);
+Vue.use(Header);
+Vue.use(Aside);
+Vue.use(Main);
+Vue.use(Footer);
+Vue.use(Timeline);
+Vue.use(TimelineItem);
+Vue.use(Link);
+Vue.use(Divider);
+Vue.use(Image);
+Vue.use(Calendar);
+Vue.use(Backtop);
+Vue.use(PageHeader);
+Vue.use(CascaderPanel);
+
+Vue.use(Loading.directive);
+Vue.prototype.$loading = Loading.service;
+Vue.prototype.$msgbox = MessageBox;
+Vue.prototype.$alert = MessageBox.alert;
+Vue.prototype.$confirm = MessageBox.confirm;
+Vue.prototype.$prompt = MessageBox.prompt;
+Vue.prototype.$notify = Notification;
+Vue.prototype.$message = Message;//渲染HTML是很危险的，不要把用户提交的内容放进去
